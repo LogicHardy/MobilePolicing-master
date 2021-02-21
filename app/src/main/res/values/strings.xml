@@ -1,0 +1,32 @@
+<resources>
+    <string name="app_name">Mobile Policing</string>
+    <string name="vadodara_police">Vadodara Police</string>
+    <string name="understood_lets_start">Understood, let\'s start!</string>
+    <string name="first_slide_title">Complaint Registration</string>
+    <string name="second_slide_title">Document Verification</string>
+    <string name="third_slide_title">SOS Button</string>
+    <string name="fourth_slide_title">Travel Guide</string>
+    <string name="first_slide_description">You can register complaint online without visiting a police station.</string>
+    <string name="second_slide_description">You can get your documents verified for various processes through this application.</string>
+    <string name="third_slide_description">In case of emergency you can use the SOS feature provided to send emergency messages to your contacts as well as nearest police station.</string>
+    <string name="fourth_slide_description">Never get lost again when visiting a new place with the help travel guide book feature.</string>
+    <string name="namaste">NAMASTE 🙏🏼</string>
+    <string name="login_message">Please login to continue</string>
+    <string name="enter_otp">Enter OTP</string>
+    <string name="enter_aadhar_card_number">Enter Aadhar card number</string>
+    <string name="police_bhavan_image">Police bhavan image</string>
+    <string name="multiline_register_complaint">Register\nComplaint</string>
+    <string name="multiline_verify_documents">Verify\nDocuments</string>
+    <string name="multiline_sos_emergency">SOS\nEmergency</string>
+    <string name="multiline_travel_guidebook">Travel\nGuidebook</string>
+    <string name="first_name">First name</string>
+    <string name="last_name">Last name</string>
+    <string name="mobile_number">Mobile number</string>
+    <string name="aadhar_card_number">Aadhar card number</string>
+    <string name="accused_first_name">Accused first name</string>
+    <string name="accused_last_name">Accused last name</string>
+    <string name="complaint_description">Complaint Description</string>
+    <string name="register_complaint">Register Complaint</string>
+    <string name="send_otp">Send OTP</string>
+    <string name="verify_otp_and_login">Verify OTP and Login</string>
+</resources>

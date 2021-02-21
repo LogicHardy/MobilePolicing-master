@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:padding="25dip"
+    android:scrollbarStyle="outsideInset"
+    tools:context=".Login">
+
+    <!--    police logo-->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:padding="20dp"
+        android:paddingTop="50dp">
+
+        <ImageView
+            android:id="@+id/loginLogo"
+            android:layout_width="200dp"
+            android:layout_height="250dp"
+            android:contentDescription="@string/vadodara_police"
+            android:scaleType="centerCrop"
+            android:src="@drawable/img_gujarat_police" />
+
+    </RelativeLayout>
+
+    <!--    welcoming message-->
+    <TextView
+        android:id="@+id/loginTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/patua_one"
+        android:text="@string/namaste"
+        android:textColor="@color/black"
+        android:textSize="40sp" />
+
+    <!--    login message-->
+    <TextView
+        android:id="@+id/loginMessageText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:fontFamily="@font/patua_one"
+        android:text="@string/login_message"
+        android:textColor="@color/black"
+        android:textSize="18sp" />
+
+    <!--    layout containing aadhar card no., otp, login btn & error message-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:orientation="vertical">
+
+        <!--        aadhar card number entry field-->
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter Email Address"
+            app:boxStrokeColor="@color/black"
+            app:boxStrokeWidthFocused="2dp"
+            app:endIconMode="clear_text"
+            app:endIconTint="@color/black"
+            app:hintTextColor="@color/black"
+            app:startIconDrawable="@drawable/ic_user_black"
+            app:startIconTint="@color/black">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/emailEditTextL"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fontFamily="sans-serif-black"
+                android:inputType="textUri"
+                android:textColor="@color/black" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!--        otp entry field-->
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/passlayout"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter Password"
+            app:boxStrokeColor="@color/black"
+            app:boxStrokeWidthFocused="2dp"
+            app:endIconMode="password_toggle"
+            app:endIconTint="@color/black"
+            app:hintTextColor="@color/black"
+            app:startIconDrawable="@drawable/ic_password_black"
+            app:startIconTint="@color/black">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/passEditTextL"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fontFamily="sans-serif-black"
+                android:inputType="textPassword"
+                android:textColor="@color/black" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!--        layout for error message-->
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="20dp">
+
+            <!--        Send otp Button-->
+
+            <!--        verify otp and login button initially not visible-->
+            <Button
+                android:id="@+id/loginBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/background_round_button"
+                android:fontFamily="@font/patua_one"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:text="Login"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="26sp"
+                android:visibility="visible"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <TextView
+                android:id="@+id/sign_up"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/background_round_button"
+                android:fontFamily="@font/patua_one"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:text="@string/verify_otp_and_login"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="26sp"
+                android:visibility="gone"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <!--            &lt;!&ndash;        login button initially invisible&ndash;&gt;-->
+            <!--            <TextView-->
+            <!--                android:id="@+id/login_button"-->
+            <!--                android:layout_width="match_parent"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:layout_marginTop="12dp"-->
+            <!--                android:background="@drawable/background_round_button"-->
+            <!--                android:fontFamily="@font/abril_fatface"-->
+            <!--                android:onClick="loginMethod"-->
+            <!--                android:paddingBottom="5dp"-->
+            <!--                android:paddingTop="5dp"-->
+            <!--                android:text="@string/login"-->
+            <!--                android:textAlignment="center"-->
+            <!--                android:textColor="@color/black"-->
+            <!--                android:textSize="26sp"-->
+            <!--                android:visibility="gone"-->
+            <!--                app:layout_constraintStart_toStartOf="parent"-->
+            <!--                app:layout_constraintTop_toTopOf="parent" />-->
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <Button
+            android:id="@+id/goToSignUpBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/transparent"
+            android:fontFamily="@font/patua_one"
+            android:text="Create new Account? Sign Up"
+            android:textColor="#2C2A2A"
+            android:textSize="16dp"
+            android:textStyle="bold"
+            android:visibility="visible"
+            app:strokeColor="#FFFFFF"
+            tools:visibility="visible" />
+
+    </LinearLayout>
+
+</LinearLayout>

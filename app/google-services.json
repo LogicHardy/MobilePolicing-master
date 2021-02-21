@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "551927270387",
+    "project_id": "mobile-police-2021",
+    "storage_bucket": "mobile-police-2021.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:551927270387:android:3797ff74bdf4d0e8976086",
+        "android_client_info": {
+          "package_name": "com.policingapp.mobilepolicing"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "551927270387-ed790p3di2c5a7a588kjp8c30fq2vtet.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAvv-0Ytejm4Gu7BLBnFn2sJPXl9rMvdRU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "551927270387-ed790p3di2c5a7a588kjp8c30fq2vtet.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

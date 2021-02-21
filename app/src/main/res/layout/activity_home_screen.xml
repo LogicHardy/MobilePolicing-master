@@ -1,0 +1,335 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HomeScreen"
+    android:orientation="vertical"
+    android:background="@color/white">
+
+    <!--    layout containing background image, title, logo, background tint-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical">
+
+        <!--            dashboard background image-->
+        <ImageView
+            android:id="@+id/dashboard_background_image"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:contentDescription="@string/police_bhavan_image"
+            android:scaleType="fitXY"
+            android:src="@drawable/img_police_bhavan"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!--            background image black tint view-->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:background="@color/darken" />
+
+        <!--            user dashboard title text-->
+        <TextView
+            android:id="@+id/dashTitleTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@id/dashboard_background_image"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="95dp"
+            android:layout_marginEnd="15dp"
+            android:fontFamily="@font/patua_one"
+            android:textColor="@color/white"
+            android:textSize="40sp" />
+
+        <!--        &lt;!&ndash;            profile image button&ndash;&gt;-->
+        <!--&lt;!&ndash;        <ImageView&ndash;&gt;-->
+        <!--&lt;!&ndash;            android:id="@+id/user_profile_imageView"&ndash;&gt;-->
+        <!--&lt;!&ndash;            android:layout_width="40dp"&ndash;&gt;-->
+        <!--&lt;!&ndash;            android:layout_height="40dp"&ndash;&gt;-->
+        <!--&lt;!&ndash;            android:layout_alignEnd="@id/dashboard_background_image"&ndash;&gt;-->
+        <!--&lt;!&ndash;            android:layout_alignTop="@id/dashboard_background_image"&ndash;&gt;-->
+        <!--&lt;!&ndash;            android:layout_marginRight="10dp"&ndash;&gt;-->
+        <!--&lt;!&ndash;            android:layout_marginTop="10dp"&ndash;&gt;-->
+        <!--&lt;!&ndash;            android:onClick="userProfileMethod"&ndash;&gt;-->
+        <!--&lt;!&ndash;            android:src="@drawable/ic_user_white" />&ndash;&gt;-->
+
+        <!--            cardview for border of logo image-->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView"
+            android:layout_width="85dp"
+            android:layout_height="85dp"
+            android:layout_marginLeft="45dp"
+            android:layout_centerVertical="true"
+            app:cardBackgroundColor="@color/colorPrimary"
+            app:cardCornerRadius="250dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <!--                cardview to make logo image circular-->
+            <androidx.cardview.widget.CardView
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_gravity="center"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="250dp">
+
+                <!--                    logo image-->
+                <ImageView
+                    android:id="@+id/dashboardLogoImage"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:layout_gravity="center"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/img_gujarat_police" />
+
+            </androidx.cardview.widget.CardView>
+
+        </androidx.cardview.widget.CardView>
+
+    </RelativeLayout>
+
+    <!--    layout containing FIR registration and document verification cards-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="20dp">
+
+        <!--        helper view, to align elements-->
+        <View
+            android:id="@+id/helper_view_1"
+            android:layout_width="1dp"
+            android:layout_height="1dp"
+            android:layout_centerHorizontal="true"/>
+
+        <!--            FIR registration card-->
+        <androidx.cardview.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="15dp"
+            app:cardBackgroundColor="@color/black"
+            app:cardCornerRadius="10dp"
+            android:layout_alignEnd="@id/helper_view_1">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/fir_registration_cardView"
+                android:layout_margin="4dp"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="10dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:onClick="goToComplaintRegistration"
+                    android:orientation="vertical"
+                    android:padding="15dp">
+
+                    <!--                FIR registration card image-->
+                    <ImageView
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:src="@drawable/img_complaints"
+                        android:contentDescription="@string/first_slide_title"/>
+
+                    <!--                FIR registration card text-->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/multiline_register_complaint"
+                        android:textAlignment="center"
+                        android:textSize="18sp"
+                        android:fontFamily="@font/patua_one"
+                        android:textColor="@color/black"
+                        android:textStyle="bold"/>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+        </androidx.cardview.widget.CardView>
+
+        <!--            document verification card-->
+        <androidx.cardview.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="15dp"
+            android:layout_alignStart="@id/helper_view_1"
+            app:cardBackgroundColor="@color/black"
+            app:cardCornerRadius="10dp">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/verify_documents_cardView"
+                android:layout_margin="4dp"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="10dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:onClick="goToDocumentVerification"
+                    android:orientation="vertical"
+                    android:padding="15dp">
+
+                    <!--                document verification card image-->
+                    <ImageView
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:src="@drawable/img_verification"
+                        android:contentDescription="@string/second_slide_title"/>
+
+                    <!--                document verification card text-->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/multiline_verify_documents"
+                        android:textAlignment="center"
+                        android:textSize="18sp"
+                        android:fontFamily="@font/patua_one"
+                        android:textColor="@color/black"
+                        android:textStyle="bold"/>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+        </androidx.cardview.widget.CardView>
+
+    </RelativeLayout>
+
+    <!--    layout containing SOS button and travel guide cards-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="20dp">
+
+        <!--        helper view, to align elements-->
+        <View
+            android:id="@+id/helper_view_2"
+            android:layout_width="1dp"
+            android:layout_height="1dp"
+            android:layout_centerHorizontal="true"/>
+
+        <!--            SOS button card-->
+        <androidx.cardview.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="15dp"
+            app:cardBackgroundColor="@color/black"
+            app:cardCornerRadius="10dp"
+            android:layout_alignEnd="@id/helper_view_2">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/sos_button_cardView"
+                android:layout_margin="4dp"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="10dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:onClick="goToSoSButton"
+                    android:orientation="vertical"
+                    android:padding="15dp">
+
+                    <!--                SOS button card image-->
+                    <ImageView
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:src="@drawable/img_sos"
+                        android:contentDescription="@string/third_slide_title"/>
+
+                    <!--                SOS button card text-->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/multiline_sos_emergency"
+                        android:textAlignment="center"
+                        android:textSize="18sp"
+                        android:fontFamily="@font/patua_one"
+                        android:textColor="@color/black"
+                        android:textStyle="bold"/>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+        </androidx.cardview.widget.CardView>
+
+        <!--            travel guide card-->
+        <androidx.cardview.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="15dp"
+            android:layout_alignStart="@id/helper_view_2"
+            app:cardBackgroundColor="@color/black"
+            app:cardCornerRadius="10dp">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/travel_guide_cardView"
+                android:layout_margin="4dp"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="10dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:onClick="goToTravelGuidebook"
+                    android:orientation="vertical"
+                    android:padding="15dp">
+
+                    <!--                travel guide card image-->
+                    <ImageView
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:src="@drawable/img_guide_book"
+                        android:contentDescription="@string/fourth_slide_title"/>
+
+                    <!--                travel guide card text-->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/multiline_travel_guidebook"
+                        android:textAlignment="center"
+                        android:textSize="18sp"
+                        android:fontFamily="@font/patua_one"
+                        android:textColor="@color/black"
+                        android:textStyle="bold"/>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+        </androidx.cardview.widget.CardView>
+
+    </RelativeLayout>
+
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical" />
+    </HorizontalScrollView>
+
+</LinearLayout>

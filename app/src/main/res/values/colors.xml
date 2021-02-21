@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#145DA0</color> //mermaid blue
+    <color name="colorPrimaryDark">#000C66</color> //navy blue
+    <color name="colorAccent">#7EC8E3</color> //baby blue
+    <color name="black">#000000</color> //black
+    <color name="white">#FFFFFF</color> //white
+    <color name="errorRed">#FF0000</color> //error red
+    <color name="okayGreen">#00FF00</color> //okay green
+    <color name="dimWhite">#E0E0E0</color> //dim white
+    <color name="transparent">#00000000</color> //transparent
+    <color name="darken">#90000000</color> //dark shade
+</resources>

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.policingapp.mobilepolicing">
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:icon="@mipmap/ic_mobile_policing_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_mobile_policing_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <!--        travel guidebook activity-->
+        <activity
+            android:name=".TravelGuidebook"
+            android:screenOrientation="portrait"/>
+        <!--        SOS button activity-->
+        <activity
+            android:name=".SignOut"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".SoSButton"
+            android:screenOrientation="portrait"/>
+        <!--        document verification activity-->
+        <activity
+            android:name=".DocumentVerification"
+            android:screenOrientation="portrait"/>
+        <!--        complaint registration activity-->
+        <activity
+            android:name=".ComplaintRegistration"
+            android:screenOrientation="portrait"/>
+        <!--        home activity-->
+        <activity
+            android:name=".HomeScreen"
+            android:screenOrientation="portrait"/>
+        <!-- login activity -->
+        <activity
+            android:name=".Login"
+            android:screenOrientation="portrait" >
+        </activity>
+        <!-- onboarding activity -->
+        <activity
+            android:name=".Onboarding"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Sign_up"
+            android:screenOrientation="portrait" >
+        </activity>
+        <!-- splash screen activity -->
+        <activity
+            android:name=".SplashScreen"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+    </application>
+</manifest>
